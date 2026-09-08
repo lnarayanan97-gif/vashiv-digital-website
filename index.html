@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vashiv Digital | Websites • Digital Marketing • Design</title>
+
+<meta name="description"
+content="Vashiv Digital creates affordable websites, digital marketing solutions, SEO and professional social media designs for businesses.">
+
+<meta name="keywords"
+content="Vashiv Digital, website development, digital marketing, SEO, social media design">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050816;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#5b5cff;
+    filter:blur(180px);
+    opacity:.20;
+    top:-150px;
+    left:-150px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00d9ff;
+    filter:blur(180px);
+    opacity:.15;
+    right:-150px;
+    bottom:-150px;
+    z-index:-2;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+
+    background:rgba(5,8,22,.65);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:#6c63ff;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#7c73ff;
+}
+
+.nav-btn{
+    padding:11px 20px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#6c63ff,#00cfff);
+    color:white!important;
+    font-weight:bold;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    padding:150px 7% 80px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:50px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 16px;
+    border-radius:30px;
+    border:1px solid rgba(124,115,255,.4);
+    background:rgba(124,115,255,.08);
+    color:#aaa5ff;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(48px,6vw,82px);
+    line-height:1.02;
+    letter-spacing:-4px;
+    max-width:750px;
+}
+
+.gradient-text{
+    background:linear-gradient(90deg,#7c73ff,#00d9ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    margin-top:25px;
+    color:#a9aec3;
+    font-size:18px;
+    line-height:1.7;
+    max-width:600px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#6c63ff,#00cfff);
+    color:#fff;
+    box-shadow:0 15px 35px rgba(90,80,255,.25);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.04);
+    color:#fff;
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.08);
+}
+
+/* ================= 3D OBJECT ================= */
+
+.scene{
+    perspective:1000px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.cube-container{
+    width:310px;
+    height:310px;
+    position:relative;
+    transform-style:preserve-3d;
+    animation:float 5s ease-in-out infinite;
+}
+
+.cube{
+    position:absolute;
+    width:230px;
+    height:230px;
+    top:40px;
+    left:40px;
+    transform-style:preserve-3d;
+    transform:rotateX(-18deg) rotateY(30deg);
+}
+
+.face{
+    position:absolute;
+    width:230px;
+    height:230px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+    font-weight:bold;
+
+    background:linear-gradient(
+        135deg,
+        rgba(124,115,255,.45),
+        rgba(0,207,255,.12)
+    );
+
+    border:1px solid rgba(255,255,255,.25);
+    box-shadow:
+        inset 0 0 40px rgba(255,255,255,.08),
+        0 0 50px rgba(75,70,255,.25);
+
+    backdrop-filter:blur(10px);
+}
+
+.front{
+    transform:translateZ(115px);
+}
+
+.back{
+    transform:rotateY(180deg) translateZ(115px);
+}
+
+.right{
+    transform:rotateY(90deg) translateZ(115px);
+}
+
+.left{
+    transform:rotateY(-90deg) translateZ(115px);
+}
+
+.top{
+    transform:rotateX(90deg) translateZ(115px);
+}
+
+.bottom{
+    transform:rotateX(-90deg) translateZ(115px);
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotateZ(0deg);
+    }
+
+    50%{
+        transform:translateY(-20px) rotateZ(2deg);
+    }
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    padding:20px 7% 90px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.stat{
+    padding:25px;
+    border-radius:18px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.08);
+    text-align:center;
+}
+
+.stat h3{
+    font-size:30px;
+}
+
+.stat p{
+    color:#858ba3;
+    margin-top:7px;
+    font-size:13px;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:100px 7%;
+}
+
+.section-title{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+
+.section-title span{
+    color:#7c73ff;
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    margin-top:12px;
+    font-size:42px;
+    letter-spacing:-2px;
+}
+
+.section-title p{
+    color:#8f95aa;
+    line-height:1.7;
+    margin-top:15px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    padding:32px;
+    border-radius:22px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.09);
+    transition:.4s;
+    transform-style:preserve-3d;
+}
+
+.card:hover{
+    transform:translateY(-10px) rotateX(3deg) rotateY(-3deg);
+    border-color:rgba(124,115,255,.5);
+    box-shadow:0 25px 60px rgba(0,0,0,.3);
+}
+
+.icon{
+    width:58px;
+    height:58px;
+    border-radius:16px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:26px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(124,115,255,.25),
+        rgba(0,207,255,.15)
+    );
+
+    margin-bottom:22px;
+}
+
+.card h3{
+    font-size:21px;
+}
+
+.card p{
+    margin-top:12px;
+    color:#8e94a9;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* ================= FEATURE ================= */
+
+.feature{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.feature-box{
+    padding:40px;
+    border-radius:28px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(124,115,255,.18),
+            transparent 50%
+        ),
+        rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transform:perspective(1000px) rotateY(5deg);
+}
+
+.feature-box h3{
+    font-size:35px;
+}
+
+.feature-box p{
+    color:#9298ac;
+    margin-top:15px;
+    line-height:1.8;
+}
+
+.check{
+    margin-top:20px;
+}
+
+.check div{
+    padding:12px 0;
+    color:#d5d7e1;
+}
+
+.check span{
+    color:#00d9ff;
+    margin-right:10px;
+}
+
+/* ================= PRICING ================= */
+
+.pricing{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.price-card{
+    padding:35px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.035);
+}
+
+.price-card.popular{
+    border-color:#6c63ff;
+    transform:scale(1.03);
+    box-shadow:0 25px 60px rgba(80,70,255,.15);
+}
+
+.popular-tag{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    background:#6c63ff;
+    font-size:11px;
+    margin-bottom:18px;
+}
+
+.price-card h3{
+    font-size:22px;
+}
+
+.price{
+    font-size:38px;
+    font-weight:800;
+    margin:20px 0;
+}
+
+.price small{
+    color:#777d92;
+    font-size:13px;
+}
+
+.price-card ul{
+    list-style:none;
+}
+
+.price-card li{
+    padding:10px 0;
+    color:#a2a7ba;
+    font-size:14px;
+}
+
+.price-card li::before{
+    content:"✓";
+    color:#00d9ff;
+    margin-right:10px;
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.step{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.step-number{
+    width:55px;
+    height:55px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#6c63ff,#00cfff);
+    font-weight:bold;
+}
+
+.step h3{
+    margin-top:20px;
+}
+
+.step p{
+    color:#858ba0;
+    margin-top:10px;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    margin:60px 7% 100px;
+    padding:70px 30px;
+    text-align:center;
+    border-radius:30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(108,99,255,.25),
+            transparent 60%
+        ),
+        rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.cta h2{
+    font-size:45px;
+    letter-spacing:-2px;
+}
+
+.cta p{
+    color:#979caf;
+    margin:15px auto 30px;
+    max-width:600px;
+    line-height:1.7;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:45px 7%;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+footer p{
+    color:#6f758a;
+    font-size:13px;
+}
+
+footer a{
+    color:#8c92a8;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .scene{
+        margin-top:30px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .services,
+    .pricing{
+        grid-template-columns:1fr;
+    }
+
+    .feature{
+        grid-template-columns:1fr;
+    }
+
+    .process{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    nav{
+        padding:16px 5%;
+    }
+
+    .hero{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .hero h1{
+        font-size:47px;
+        letter-spacing:-2px;
+    }
+
+    section{
+        padding:75px 5%;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .stats{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cube-container{
+        transform:scale(.75);
+    }
+
+    .cta{
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .cta h2{
+        font-size:34px;
+    }
+
+    footer{
+        padding:35px 5%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        Vashiv<span>Digital</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#process">Process</a>
+        <a href="#contact" class="nav-btn">Get Started</a>
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div>
+
+        <div class="badge">
+            🚀 Digital Solutions for Growing Businesses
+        </div>
+
+        <h1>
+            Build Your
+            <span class="gradient-text">
+                Digital Presence.
+            </span>
+        </h1>
+
+        <p>
+            Affordable websites, digital marketing, SEO and creative
+            designs — everything your business needs to grow online.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://wa.me/919999999999"
+                class="btn btn-primary">
+                💬 Talk on WhatsApp
+            </a>
+
+            <a
+                href="#services"
+                class="btn btn-secondary">
+                Explore Services →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3D OBJECT -->
+
+    <div class="scene">
+
+        <div class="cube-container">
+
+            <div class="cube">
+
+                <div class="face front">V</div>
+                <div class="face back">D</div>
+                <div class="face right">✦</div>
+                <div class="face left">↗</div>
+                <div class="face top">●</div>
+                <div class="face bottom">◆</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<div class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <h3>₹</h3>
+            <p>Affordable Pricing</p>
+        </div>
+
+        <div class="stat">
+            <h3>100%</h3>
+            <p>Custom Design</p>
+        </div>
+
+        <div class="stat">
+            <h3>24/7</h3>
+            <p>Online Presence</p>
+        </div>
+
+        <div class="stat">
+            <h3>∞</h3>
+            <p>Growth Possibilities</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="section-title">
+
+        <span>What We Do</span>
+
+        <h2>
+            Everything Your Business Needs Online
+        </h2>
+
+        <p>
+            From your first website to digital marketing,
+            we help your business build a strong online identity.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="icon">🌐</div>
+
+            <h3>Website Development</h3>
+
+            <p>
+                Modern, fast and mobile-friendly websites
+                designed specifically for your business.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📈</div>
+
+            <h3>Digital Marketing</h3>
+
+            <p>
+                Reach more customers through social media,
+                online campaigns and strategic digital marketing.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎨</div>
+
+            <h3>Social Media Design</h3>
+
+            <p>
+                Professional promotional posts, offers,
+                festival creatives and business designs.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🔍</div>
+
+            <h3>SEO</h3>
+
+            <p>
+                Improve your online visibility and help
+                customers discover your business through search.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📱</div>
+
+            <h3>Business Branding</h3>
+
+            <p>
+                Logos, business creatives and a consistent
+                visual identity for your brand.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">⚡</div>
+
+            <h3>Website Maintenance</h3>
+
+            <p>
+                Content updates, improvements and technical
+                support to keep your website running smoothly.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOLUTIONS ================= -->
+
+<section id="solutions">
+
+    <div class="feature">
+
+        <div class="feature-box">
+
+            <h3>
+                Your Business.
+                <br>
+                Your Website.
+                <br>
+                Your Brand.
+            </h3>
+
+            <p>
+                We believe every small business deserves a
+                professional digital presence without spending
+                a huge amount of money.
+            </p>
+
+            <div class="check">
+
+                <div>
+                    <span>✓</span>
+                    Affordable solutions
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Modern designs
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Mobile responsive
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Business-focused approach
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="section-title" style="text-align:left">
+
+                <span>Our Approach</span>
+
+                <h2>
+                    Simple Ideas.
+                    Powerful Digital Results.
+                </h2>
+
+                <p>
+                    Whether you are starting a new business,
+                    running a local shop or expanding an existing
+                    brand, we create digital solutions around
+                    your actual business needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing">
+
+    <div class="section-title">
+
+        <span>Simple Pricing</span>
+
+        <h2>
+            Start Small. Grow Bigger.
+        </h2>
+
+        <p>
+            Flexible packages for businesses at different stages.
+        </p>
+
+    </div>
+
+
+    <div class="pricing">
+
+        <div class="price-card">
+
+            <h3>Starter</h3>
+
+            <div class="price">
+                ₹4,999
+                <small>/ starting</small>
+            </div>
+
+            <ul>
+
+                <li>Professional Website</li>
+                <li>Mobile Responsive</li>
+                <li>Basic SEO</li>
+                <li>WhatsApp Integration</li>
+                <li>Contact Form</li>
+
+            </ul>
+
+            <br>
+
+            <a
+                href="https://wa.me/917904060657?text=Hi%20Vashiv%20Digital%2C%20I%20need%20a%20Starter%20Website."
+                class="btn btn-secondary">
+                Enquire Now
+            </a>
+
+        </div>
+
+
+        <div class="price-card popular">
+
+            <div class="popular-tag">
+                MOST POPULAR
+            </div>
+
+            <h3>Business</h3>
+
+            <div class="price">
+                ₹9,999
+                <small>/ starting</small>
+            </div>
+
+            <ul>
+
+                <li>Premium Website</li>
+                <li>Mobile Responsive</li>
+                <li>SEO Setup</li>
+                <li>WhatsApp Integration</li>
+                <li>Social Media Integration</li>
+                <li>Google Business Support</li>
+
+            </ul>
+
+            <br>
+
+            <a
+                href="https://wa.me/917904060657?text=Hi%20Vashiv%20Digital%2C%20I%20need%20a%20Business%20Website."
+                class="btn btn-primary">
+                Get Started
+            </a>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>Growth</h3>
+
+            <div class="price">
+                Custom
+            </div>
+
+            <ul>
+
+                <li>Advanced Website</li>
+                <li>Digital Marketing</li>
+                <li>SEO Strategy</li>
+                <li>Social Media Designs</li>
+                <li>Monthly Support</li>
+                <li>Custom Solutions</li>
+
+            </ul>
+
+            <br>
+
+            <a
+                href="https://wa.me/917904060657?text=Hi%20Vashiv%20Digital%2C%20I%20need%20a%20Growth%20Package."
+                class="btn btn-secondary">
+                Discuss Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROCESS ================= -->
+
+<section id="process">
+
+    <div class="section-title">
+
+        <span>How It Works</span>
+
+        <h2>
+            From Idea to Online
+        </h2>
+
+        <p>
+            A simple process designed to make your digital journey easy.
+        </p>
+
+    </div>
+
+
+    <div class="process">
+
+        <div class="step">
+
+            <div class="step-number">01</div>
+
+            <h3>Talk</h3>
+
+            <p>
+                Tell us about your business and your requirements.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">02</div>
+
+            <h3>Plan</h3>
+
+            <p>
+                We create a suitable digital strategy for your business.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">03</div>
+
+            <h3>Build</h3>
+
+            <p>
+                We design and develop your website and digital assets.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">04</div>
+
+            <h3>Grow</h3>
+
+            <p>
+                Launch your digital presence and start reaching customers.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<div class="cta" id="contact">
+
+    <h2>
+        Ready to Grow Online?
+    </h2>
+
+    <p>
+        Let's build something amazing for your business.
+        Tell us your idea and we'll help you turn it into a digital reality.
+    </p>
+
+    <a
+        href="https://wa.me/917904060657?text=Hi%20Vashiv%20Digital%2C%20I%20would%20like%20to%20discuss%20my%20business%20website."
+        class="btn btn-primary">
+        💬 Start a Conversation
+    </a>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+
+        <div class="logo">
+            Vashiv<span>Digital</span>
+        </div>
+
+        <p style="margin-top:8px">
+            Digital solutions for growing businesses.
+        </p>
+
+    </div>
+
+    <div>
+
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+    <div>
+
+        <p>
+            © 2026 Vashiv Digital. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
